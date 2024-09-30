@@ -18,9 +18,10 @@ const getPool = async () => {
         password: process.env.DB_PASSWORD,
         server: process.env.DB_SERVER,
         database: process.env.DB_DATABASE,
+        port: 1433,
         options: {
             encrypt: true, // Use this if you're connecting to Azure
-            trustServerCertificate: true // Set to true if you have SSL issues
+            trustServerCertificate: false // Set to true if you have SSL issues
         }
     });
     return pool;
