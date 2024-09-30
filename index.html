@@ -15,7 +15,8 @@
     <script>
         document.getElementById('fetch-data-btn').addEventListener('click', async () => {
             try {
-                const response = await fetch('/data'); // Sending a GET request to the /data endpoint
+                const backendUrl = process.env.BACKEND_URL || 'http://localhost:3000'; // Fallback for local development
+                const response = await fetch(`${backendUrl}/data`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
