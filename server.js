@@ -21,7 +21,8 @@ const getPool = async () => {
         port: 1433,
         options: {
             encrypt: true, // Use this if you're connecting to Azure
-            trustServerCertificate: false // Set to true if you have SSL issues
+            trustServerCertificate: false,
+            enableArithAbort: true
         }
     });
     return pool;
