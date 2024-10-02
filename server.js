@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path'); // Import path module
 
 const app = express();
-const port = process.env.PORT || 3000; // You can change this for Azure
+const port = 443; // You can change this for Azure
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
